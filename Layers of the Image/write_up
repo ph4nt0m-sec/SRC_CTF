@@ -1,0 +1,5 @@
+- Let modify SOI and EOI of target file to SOI and EOI of JPEG. Then rename to [target_file].jpg
+- Use steghide extract -sf src_hidden.jpg to get end_flag.txt to get @ta}
+- Use exiftool to get Image Description               : ?=;LvE'r:cF1WE<RCT^dlI3W. Let decode ?=;LvE'r:cF1WE<RCT^dlI3W by Base92 to get SRC{H!dd3n_In_met4d
+=> SRC{H!dd3n_In_met4d@ta}
+
