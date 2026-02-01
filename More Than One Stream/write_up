@@ -1,0 +1,8 @@
+ADS ( Alternate Data Stream ) is an NTFS file system feature enabling a file to contain multiple, hidden, metadata-rich data streams alongside its primary content.
+They are not visible in standard file listings. To find them, use dir /r in command prompt or specialized tools like Streams by Sysinternals. 
+Example: when you dir /r, terminal will show you: hello.txt:invisible.exe. insivisible.exe is ADS file.
+Ok, let dive into this challenge:
+  - When you open file disk on autopsy, you will see simplePython.py:__pycache__. __pycache__ is ADS and you can see hex of it that is a file header of PE. 
+  - Extract it and rename to file .exe. I give it is invisible.exe
+  - Execute it, you will a prompt "Enter key: ". If you input wrong key, a push up show you: "Sai key roi!"
+  - Let open it on IDA, find string "Chinh xac..." and patch it. You will get FLAG: SRC{4dS_c@n_b3_D4ng3r0us_3636}
